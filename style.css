@@ -1,0 +1,174 @@
+@font-face {
+  src: url("fonts/font.woff2") format("woff2"),
+       url("fonts/font.woff") format("woff"),
+       url("fonts/font.ttf") format("truetype");
+  font-family: "Blocky"
+}
+
+body, #main {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-family: "Blocky";
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+#text {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#shop {
+  position: absolute;
+  left: 105%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#shop > #shopscroll > button {
+  width: 99%;
+  min-height: 75px;
+  height: auto;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  transition: background-color 1s;
+  text-align: left;
+  overflow-y: auto;
+}
+
+#shop > #shopscroll > button > span.material-icons {
+  font-size: 45px;
+  margin-left: 10px;
+}
+
+#shop > #shopscroll> button > span.text {
+  font-size: 45px;
+  margin-left: 20px;
+}
+
+#shop > #shopscroll > button > span.cost {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+#shop > #shopscroll > button > span.amount {
+  font-size: 50px;
+  float: right;
+}
+
+
+#shop > #shopscroll > button:active {
+  -moz-animation: click 0.3s ease-in-out both;
+  -webkit-animation: click 0.3s ease-in-out both;
+  -o-animation: click 0.3s ease-in-out both;
+  -ms-animation: click 0.3s ease-in-out both;
+  animation: click 0.3s ease-in-out both;
+}
+
+#shop > #shopscroll > button.yes {background-color: lightgreen;}
+#shop > #shopscroll > button.no {background-color: rgb(255, 145, 143);}
+#shop > #shopscroll > button.yes:hover {background-color: rgb(57, 255, 20);}
+#shop > #shopscroll > button.no:hover {background-color: red;}
+
+#shopscroll {
+  overflow-y: auto;
+  height: 72%;
+}
+
+#shopscroll::-moz-scrollbar {width: 20px;}#shopscroll::-moz-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}#shopscroll::-moz-scrollbar-thumb {background-color: grey; border-radius: 10px}#shopscroll::-moz-scrollbar-thumb:hover {background-color: darkgrey}
+#shopscroll::-webkit-scrollbar {width: 20px;}#shopscroll::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}#shopscroll::-webkit-scrollbar-thumb {background-color: grey; border-radius: 10px}#shopscroll::-webkit-scrollbar-thumb:hover {background-color: darkgrey}
+#shopscroll::-o-scrollbar {width: 20px;}#shopscroll::-o-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}#shopscroll::-o-scrollbar-thumb {background-color: grey; border-radius: 10px}#shopscroll::-o-scrollbar-thumb:hover {background-color: darkgrey}
+#shopscroll::-ms-scrollbar {width: 20px;}#shopscroll::-ms-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}#shopscroll::-ms-scrollbar-thumb {background-color: grey; border-radius: 10px}#shopscroll::-ms-scrollbar-thumb:hover {background-color: darkgrey}
+#shopscroll::scrollbar {width: 20px;}#shopscroll::scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}#shopscroll::scrollbar-thumb {background-color: grey; border-radius: 10px}#shopscroll::scrollbar-thumb:hover {background-color: darkgrey}
+
+#stat {
+  position: absolute;
+  left: 210%;
+  top: 0%;
+  width: 100%;
+}
+
+#controls {
+  position: fixed;
+  top: 95%
+}
+
+#controls > button {
+  transition: background-color 1s;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  border: none;
+  margin-left: 5px;
+  width: 50px;
+}
+
+#controls > button:hover {
+  background-color: white;
+}
+
+#error {
+  position: fixed;
+  top: 92.5%;
+  left: 75%;
+  width: 24%;
+  overflow: hidden;
+}
+
+#error > #errorText {
+  text-align: left;
+}
+
+#view {
+  -moz-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.movecube {
+  -moz-transform: translate(0%, 0px);
+  -webkit-transform: translate(0%, 0px);
+  -o-transform: translate(0%, 0px);
+  -ms-transform: translate(0%, 0px);
+  transform: translate(0%, 0px);
+}
+
+.moveshop {
+  -moz-transform: translate(-105%, 0px);
+  -webkit-transform: translate(-105%, 0px);
+  -o-transform: translate(-105%, 0px);
+  -ms-transform: translate(-105%, 0px);
+  transform: translate(-105%, 0px);
+}
+
+.movestat {
+  -moz-transform: translate(-210%, 0px);
+  -webkit-transform: translate(-210%, 0px);
+  -o-transform: translate(-210%, 0px);
+  -ms-transform: translate(-210%, 0px);
+  transform: translate(-210%, 0px);
+}
+
+@-moz-keyframes click{0%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}50%{-moz-transform:scale(.99);-webkit-transform:scale(.99);-o-transform:scale(.99);-ms-transform:scale(.99);transform:scale(.99)}100%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
+@-webkit-keyframes click{0%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}50%{-moz-transform:scale(.99);-webkit-transform:scale(.99);-o-transform:scale(.99);-ms-transform:scale(.99);transform:scale(.99)}100%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
+@-o-keyframes click{0%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}50%{-moz-transform:scale(.99);-webkit-transform:scale(.99);-o-transform:scale(.99);-ms-transform:scale(.99);transform:scale(.99)}100%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
+@-ms-keyframes click{0%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}50%{-moz-transform:scale(.99);-webkit-transform:scale(.99);-o-transform:scale(.99);-ms-transform:scale(.99);transform:scale(.99)}100%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
+@keyframes click{0%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}50%{-moz-transform:scale(.99);-webkit-transform:scale(.99);-o-transform:scale(.99);-ms-transform:scale(.99);transform:scale(.99)}100%{-moz-transform:scale(1);-webkit-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
