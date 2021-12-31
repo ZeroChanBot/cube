@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spin Cube | Clicker Game by Nathan</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <meta name="keywords" content="game, cube, clicker, spinner, webgl, html, fun">
+    <meta name="description" content="This is a clicker game turned intoa spinner game! Spin the cube to make money, spend it, and make more money!">
+    <meta name="url" content="http://spin-cube.drakefletcher2.repl.co">
+    <meta name="type" content="game">
+
+    <meta name="og:title" content="Spin Cube | Clicker Game by Nathan">
+    <meta name="og:description" content="This is a clicker game turned intoa spinner game! Spin the cube to make money, spend it, and make more money!">
+    <meta name="og:type" content="game">
+    <meta name="og:image" content="assets/icon.png">
+    <meta name="og:site_name" content="Spin Cube | Clicker Game by Nathan">
+    <meta name="og:country-name" content="USA">
+
+    <meta itemprop="image" content="assets/icon.png">
+
+    <meta name="twitter:site" content="@replit">
+    <meta name="twitter:title" content="Spin Cube | Clicker Game by Nathan">
+    <meta name="twitter:description" content="This is a clicker game turned intoa spinner game! Spin the cube to make money, spend it, and make more money!">
+    <meta name="twitter:image" content="assets/icon.png">
+    
+    <meta name="google" value="notranslate">
+
+    <link type="application/json+oembed" href="oembed.json">
+    <link href="favicon.ico" rel="icon">
+
+    <link rel="preload" href="fonts/font.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/font.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/font.woff2" as="font" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8JS4DP2ZQ"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-F8JS4DP2ZQ");</script>
+  </head>
+  <body>
+    <div id="main">
+    <div id="view" class="movecube">
+      <div id="game">
+        <canvas id="webgl"></canvas>
+        <canvas id="text"></canvas>
+      </div>
+      <div id="shop">
+        <h1>Shop</h1>
+        <hr>
+        <div id="shopscroll">
+          <button onclick="void(0)" class="no" id="booster"><span class="material-icons">mouse</span><span class="text">Upgrade CPS</span><span class="cost">10 Coins</span><span class="amount">0</span></button>
+          <button onclick="void(0)" class="no" id="spinner"><span class="material-icons">loop</span><span class="text">Auto Generate Coins</span><span class="cost">50 Coins</span><span class="amount">0</span></button>
+          <button onclick="void(0)" class="no" id="maxspeed"><span class="material-icons">speed</span><span class="text">Increase Max Speed</span><span class="cost">100 Coins</span><span class="amount">0</span></button>
+          <button onclick="void(0)" class="no" id="acceleration"><span class="material-icons">fast_forward</span><span class="text">Increase Acceleration</span><span class="cost">150 Coins</span><span class="amount">0</span></button>
+          <button onclick="void(0)" class="no" id="percent"><span class="material-icons">trending_up</span><span class="text">Increases Earnings by 5%</span><span class="cost">200 Coins</span><span class="amount">0</span></button>
+        </div>
+      </div>
+      <div id="stat">
+        <h1>Stats</h1>
+      </div>
+    </div>
+    <div id="controls">
+      <button onclick="document.getElementById('view').className = 'movecube';"><span class="material-icons">view_in_ar</span></button>
+      <button onclick="document.getElementById('view').className = 'moveshop';"><span class="material-icons">storefront</span></button>
+      <button onclick="document.getElementById('view').className = 'movestat';"><span class="material-icons">query_stats</span></button>
+    </div>
+    <div id="error"><p id="errorText"></p></div>
+    <script src="script.js"></script>
+    </div>
+  </body>
+</html>
